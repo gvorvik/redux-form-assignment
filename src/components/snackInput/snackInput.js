@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
+
 
 class SnackInput extends Component {
 
@@ -29,8 +32,8 @@ class SnackInput extends Component {
         return (
             <div>
                 <h3>Enter a Snack</h3>
-                <input onChange={this.handleInputChange} type="text" />
-                <button onClick={this.submitSnack}>Submit Snack</button>
+                <Input placeholder="Snack Name" onChange={this.handleInputChange} type="text" />
+                <Button variant="outlined" color="primary" onClick={this.submitSnack}>Submit Snack</Button>
             </div>
         );
     }
