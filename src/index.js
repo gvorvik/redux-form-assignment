@@ -7,7 +7,11 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 
-const firstReducer = (state = {}, action) => {
+const firstReducer = (state = [], action) => {
+    if(action.type === 'SNACK_INPUT') {
+        console.log('reducer', action);
+        return [...state, action.snack];
+    }
     return state;
 };
 

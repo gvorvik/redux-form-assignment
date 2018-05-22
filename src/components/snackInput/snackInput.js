@@ -18,15 +18,17 @@ class SnackInput extends Component {
     }
 
     submitSnack = () => {
-        // const action = {}
-        console.log(this.state.snack);
-        
+        const action = {
+            type: 'SNACK_INPUT',
+            snack: this.state.snack,
+        }
+        this.props.dispatch(action);
     };
 
     render() {
         return (
             <div>
-                <h1>Hello Input</h1>
+                <h3>Enter a Snack</h3>
                 <input onChange={this.handleInputChange} type="text" />
                 <button onClick={this.submitSnack}>Submit Snack</button>
             </div>
