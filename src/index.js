@@ -20,7 +20,7 @@ const storeInstance = createStore(
     combineReducers({
         firstReducer,
     }),
-
+    
     applyMiddleware(logger),
 );
 
